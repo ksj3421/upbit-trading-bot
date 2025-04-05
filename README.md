@@ -30,8 +30,13 @@ Upbit API를 활용한 자동화된 암호화폐 트레이딩 봇입니다. 모�
 
 1. 저장소 클론
 ```bash
+# HTTPS 사용
 git clone https://github.com/ksj3421/upbit-trading-bot.git
 cd upbit-trading-bot
+
+# 또는 SSH 사용 (SSH 키가 설정된 경우)
+# git clone git@github.com:ksj3421/upbit-trading-bot.git
+# cd upbit-trading-bot
 ```
 
 2. Poetry를 사용하여 의존성 설치
