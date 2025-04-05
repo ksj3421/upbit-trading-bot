@@ -304,7 +304,7 @@ class MomentumStrategy(MeanReversionStrategy):
                 "current_krw": current_krw,
                 "current_coin": current_coin,
                 "current_price": current_price,
-                "latest": df.iloc[-1]
+                "latest": df.iloc[-1],
             }
         except Exception as e:
             if self.logger:
