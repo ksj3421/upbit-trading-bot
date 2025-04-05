@@ -1,5 +1,7 @@
 # Upbit Trading Bot
 
+[![Code Quality Check](https://github.com/ksj3421/upbit-trading-bot/actions/workflows/ci.yml/badge.svg)](https://github.com/ksj3421/upbit-trading-bot/actions/workflows/ci.yml)
+
 Upbit API를 활용한 자동화된 암호화폐 트레이딩 봇입니다. 모멘텀과 평균회귀 전략을 지원하며, 실시간 시장 분석과 자동 매매 기능을 제공합니다.
 
 ## 주요 기능
@@ -84,22 +86,33 @@ Poetry를 사용하여 개발 의존성 설치:
 poetry install --with dev
 ```
 
-코드 포맷팅:
+### 코드 품질 관리
+
+이 프로젝트는 GitHub Actions를 통해 자동화된 코드 품질 검사를 실행합니다:
+- Black: 코드 포맷팅
+- Flake8: 코드 린팅
+- isort: import 문 정렬
+- mypy: 타입 체크
+- pytest: 단위 테스트
+
+로컬에서 코드 품질 검사 실행:
+
 ```bash
+# 코드 포맷팅
 poetry run black .
 poetry run isort .
-```
 
-린팅:
-```bash
+# 린팅
 poetry run flake8
-poetry run mypy .
-```
 
-테스트 실행:
-```bash
+# 타입 체크
+poetry run mypy .
+
+# 테스트 실행
 poetry run pytest
 ```
+
+모든 pull request는 자동으로 위의 검사를 통과해야 합니다.
 
 ## ⚠️ 주의사항
 
